@@ -36,33 +36,33 @@ const ProfileSchema = new Schema({
     type: String
   },
   experience: [
-      {
-        title: {
-          type: String,
-          required: true
-        },
-        company: {
-          type: String,
-          required: true
-        },
-        location: {
-          type: String,
-        },
-        from: {
-          type: Date,
-          required: true
-        }
-        to: {
-          type: Date
-        },
-        current: {
-          type: Boolean,
-          default: false
-        },
-        description: {
-          type: String,
-        }
+    {
+      title: {
+        type: String,
+        required: true
+      },
+      company: {
+        type: String,
+        required: true
+      },
+      location: {
+        type: String
+      },
+      from: {
+        type: Date,
+        required: true
+      },
+      to: {
+        type: Date
+      },
+      current: {
+        type: Boolean,
+        default: false
+      },
+      description: {
+        type: String
       }
+    }
   ],
   education: [
     {
@@ -81,7 +81,7 @@ const ProfileSchema = new Schema({
       from: {
         type: Date,
         required: true
-      }
+      },
       to: {
         type: Date
       },
@@ -90,7 +90,7 @@ const ProfileSchema = new Schema({
         default: false
       },
       description: {
-        type: String,
+        type: String
       }
     }
   ],
@@ -117,4 +117,4 @@ const ProfileSchema = new Schema({
   }
 });
 
-module.exports = Profile = mongoose.model('profile, ProfileSchema');
+module.exports = Profile = mongoose.model('profile', ProfileSchema);
